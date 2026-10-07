@@ -1,0 +1,22 @@
+{
+  "name": "@chainers/data-pipeline",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src tests ../../scripts/update-data.ts ../../scripts/verify-data.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "update": "node --import tsx ../../scripts/update-data.ts",
+    "verify": "node --import tsx ../../scripts/verify-data.ts"
+  },
+  "dependencies": {
+    "@chainers/shared-types": "workspace:*",
+    "zod": "^3.23.0"
+  }
+}

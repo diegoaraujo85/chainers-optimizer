@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "updatedAt": "2026-10-07T00:00:00.000Z",
+  "warnings": ["Bootstrap snapshot; run pnpm data:update to fetch current official data."]
+}
